@@ -25,40 +25,16 @@
       "alt-w": "pane::CloseActiveItem"
     }
   },
+  // 各種フォーカス
   {
-    // editorへのフォーカス
     "bindings": {
-      "ctrl-alt-e": "editor::ToggleFocus"
-    }
-  },
-  {
-    // Agentへのフォーカスをトグル
-    "bindings": {
-      "ctrl-alt-a": "agent::ToggleFocus"
-    }
-  },
-  {
-    // Project Panel へのフォーカスをトグル
-    "bindings": {
-      "ctrl-alt-p": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    // Outline Panel へのフォーカスをトグル
-    "bindings": {
-      "ctrl-alt-o": "outline_panel::ToggleFocus"
-    }
-  },
-  {
-    // Git Panel へのフォーカスをトグル
-    "bindings": {
-      "ctrl-alt-g": "git_panel::ToggleFocus"
-    }
-  },
-  {
-    // Collaboration Panel へのフォーカスをトグル
-    "bindings": {
-      "ctrl-alt-c": "collab_panel::ToggleFocus"
+      "ctrl-alt-e": "editor::ToggleFocus",
+      "ctrl-alt-a": "agent::ToggleFocus",
+      "ctrl-alt-p": "project_panel::ToggleFocus",
+      "ctrl-alt-o": "outline_panel::ToggleFocus",
+      "ctrl-alt-g": "git_panel::ToggleFocus",
+      "ctrl-alt-c": "collab_panel::ToggleFocus",
+      "ctrl-alt-t": "terminal_panel::Toggle"
     }
   },
   {
@@ -69,18 +45,25 @@
     }
   },
   {
-    // ターミナル トグル
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-alt-t": "terminal_panel::Toggle"
-    }
-  },
-  {
     // editor のタブ移動: ctrl-tab で右隣、ctrl-shift-tab で左隣
     "context": "Editor",
     "bindings": {
       "ctrl-tab": "pane::ActivateNextItem",
       "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    // ホバーを起動する
+    "context": "Editor",
+    "bindings": {
+      "ctrl-,": "editor::Hover"
+    }
+  },
+  {
+    // すべての参照を検索
+    "context": "Editor",
+    "bindings": {
+      "g r": "editor::FindAllReferences"
     }
   }
 ]
