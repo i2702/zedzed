@@ -1,0 +1,86 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace && !ProjectPanel",
+    "bindings": {
+      "alt-p": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "alt-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    // editorへのフォーカス
+    "bindings": {
+      "ctrl-alt-e": "editor::ToggleFocus"
+    }
+  },
+  {
+    // Agentへのフォーカスをトグル
+    "bindings": {
+      "ctrl-alt-a": "agent::ToggleFocus"
+    }
+  },
+  {
+    // Project Panel へのフォーカスをトグル
+    "bindings": {
+      "ctrl-alt-p": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    // Outline Panel へのフォーカスをトグル
+    "bindings": {
+      "ctrl-alt-o": "outline_panel::ToggleFocus"
+    }
+  },
+  {
+    // Git Panel へのフォーカスをトグル
+    "bindings": {
+      "ctrl-alt-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    // Collaboration Panel へのフォーカスをトグル
+    "bindings": {
+      "ctrl-alt-c": "collab_panel::ToggleFocus"
+    }
+  },
+  {
+    // ctrl-j のボトムドック(ターミナル)トグルを無効化
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-j": null
+    }
+  },
+  {
+    // ターミナル トグル
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-t": "terminal_panel::Toggle"
+    }
+  },
+  {
+    // editor のタブ移動: ctrl-tab で右隣、ctrl-shift-tab で左隣
+    "context": "Editor",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  }
+]
